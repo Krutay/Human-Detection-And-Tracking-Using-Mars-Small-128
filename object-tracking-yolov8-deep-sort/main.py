@@ -94,10 +94,10 @@ while True:
         cv2.putText(frame, f"ID: {track_id}", (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.75, colors[track_id % len(colors)], 2)
 
     # Write the processed frame to the output video (in grayscale)
-    cap_out.write(gray_frame)
+    cap_out.write(frame)
 
     # Display the processed frame
-    cv2.imshow('Video', gray_frame)
+    cv2.imshow('Video', frame)
 
     # Break the loop if 'q' is pressed
     if cv2.waitKey(30) & 0xFF == ord('q'):
